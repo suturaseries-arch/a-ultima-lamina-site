@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A Última Lâmina — JNZ</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #080808;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.25),
+          rgba(0,0,0,0.75)
+        ),
+        url("assets/Capa-promocional.png")
+        center / cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .author {
+      color: #f2c400;
+      letter-spacing: 8px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      text-transform: uppercase;
+      line-height: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #ddd;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #f2c400;
+      color: #080808;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .section {
+      padding: 80px 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #f2c400;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      color: #ccc;
+      line-height: 1.8;
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="author">
+        JNZ
+      </div>
+
+      <h1>
+        A Última Lâmina
+      </h1>
+
+      <p class="tagline">
+        Um reino em guerra. Uma invasão que ninguém esperava.
+        Uma criança no centro de tudo.
+      </p>
+
+      <a href="#historia" class="button">
+        CONHECER A HISTÓRIA
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="section" id="historia">
+
+    <h2>
+      A História
+    </h2>
+
+    <p>
+      Nas fronteiras de Kurogane, a paz sempre foi uma
+      trégua mal costurada. Quando uma invasão rompe as
+      muralhas em uma única noite, o clã Takeda descobre
+      que a guerra é apenas a superfície de algo muito
+      mais antigo.
+    </p>
+
+  </section>
+
+</body>
+</html>
