@@ -398,19 +398,25 @@ console.log("Supabase conectado!");
 console.log(data);
 console.log(error);
 
-    const primeiroPersonagem = data[0];
+    const lista = document.getElementById("lista-personagens");
 
-document
-  .getElementById("lista-personagens")
-  .innerHTML = `
-    <h3 style="color: #f2c400; margin-bottom: 10px;">
-      ${primeiroPersonagem.Nome}
-    </h3>
+lista.innerHTML = "";
 
-    <p>
-      ${primeiroPersonagem.Descricao}
-    </p>
+data.forEach((personagem) => {
+  lista.innerHTML += `
+    <div style="margin-top: 30px;">
+
+      <h3 style="color: #f2c400; margin-bottom: 10px;">
+        ${personagem.Nome}
+      </h3>
+
+      <p>
+        ${personagem.Descricao}
+      </p>
+
+    </div>
   `;
+});
   </script>
   
 </body>
