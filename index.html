@@ -454,6 +454,21 @@ console.log("Supabase conectado!");
 console.log(clas);
 console.log(erroClas);
 
+    const listaClas = document.getElementById("lista-clas");
+
+clas.forEach((cla) => {
+  listaClas.innerHTML += `
+    <div class="personagem-card">
+      <img
+        src="${cla.Imagem}"
+        alt="Brasão do Clã ${cla.Nome}"
+      >
+
+      <h3>${cla.Nome}</h3>
+    </div>
+  `;
+});
+
     const { data, error } = await supabase
   .from("Personagens")
   .select("*");
