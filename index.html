@@ -152,6 +152,32 @@
   color: #f2c400;
   margin-bottom: 10px;
 }
+
+    .universo-card {
+  background: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.universo-card:hover {
+  transform: translateY(-5px);
+  border-color: #8b5cf6;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.universo-card h3 {
+  color: #8b5cf6;
+  margin-bottom: 10px;
+}
+
+#lista-clas,
+#lista-imperios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
     
   </style>
 </head>
@@ -275,11 +301,11 @@
 
   <div id="lista-clas">
 
-    <div class="personagem-card">
+    <div class="universo-card">
       <h3>Mizura</h3>
     </div>
 
-    <div class="personagem-card">
+    <div class="universo-card">
       <h3>Takeda</h3>
     </div>
 
@@ -291,15 +317,15 @@
 
   <div id="lista-imperios">
 
-    <div class="personagem-card">
+    <div class="universo-card">
       <h3>Ühoro</h3>
     </div>
 
-    <div class="personagem-card">
+    <div class="universo-card">
       <h3>Kurogane</h3>
     </div>
 
-    <div class="personagem-card">
+    <div class="universo-card">
       <h3>Varyō</h3>
     </div>
 
