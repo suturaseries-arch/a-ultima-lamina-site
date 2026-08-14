@@ -328,6 +328,14 @@ data.forEach((personagem) => {
   lista.innerHTML += `
     <div style="margin-top: 30px;">
 
+      ${personagem.Imagem ? `
+        <img
+          src="${personagem.Imagem}"
+          alt="${personagem.Nome}"
+          style="width: 100%; max-width: 400px; border-radius: 8px; margin-bottom: 15px;"
+        >
+      ` : ""}
+
       <h3 style="color: #f2c400; margin-bottom: 10px;">
         ${personagem.Nome}
       </h3>
