@@ -252,7 +252,10 @@
     <h2>
       Personagens
     </h2>
-
+      
+<div id="lista-personagens">
+</div>
+      
     <div style="margin-top: 30px;">
 
       <h3 style="color: #f2c400; margin-bottom: 10px;">
@@ -387,6 +390,13 @@
 );
 
 console.log("Supabase conectado!");
+
+    const { data, error } = await supabase
+  .from("Personagens")
+  .select("*");
+
+console.log(data);
+console.log(error);
   </script>
   
 </body>
