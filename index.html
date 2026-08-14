@@ -466,6 +466,13 @@ data.forEach((personagem) => {
     </div>
   `;
 });
+
+   document.querySelectorAll("#lista-personagens .personagem-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("selecionado");
+  });
+});
+    
   </script>
   
 </body>
