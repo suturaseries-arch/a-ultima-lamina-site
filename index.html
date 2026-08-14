@@ -351,18 +351,6 @@
   </h3>
 
   <div id="lista-clas">
-
-    
-<div class="personagem-card">
-  <img src="assets/Mizurasimbofc.png" alt="Brasão do Clã Mizura">
-  <h3>Mizura</h3>
-</div>
-    
-    <div class="personagem-card">
-  <img src="assets/Takedasimbofc.png" alt="Símbolo do Clã Takeda">
-  <h3>Takeda</h3>
-    </div>
-    
   </div>
       
 <div class="universo-divisor"></div>
@@ -458,6 +446,13 @@
 );
 
 console.log("Supabase conectado!");
+
+    const { data: clas, error: erroClas } = await supabase
+  .from("Clas")
+  .select("*");
+
+console.log(clas);
+console.log(erroClas);
 
     const { data, error } = await supabase
   .from("Personagens")
