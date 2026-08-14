@@ -469,7 +469,15 @@ data.forEach((personagem) => {
 
    document.querySelectorAll("#lista-personagens .personagem-card").forEach((card) => {
   card.addEventListener("click", () => {
-    card.classList.toggle("selecionado");
+
+    document
+      .querySelectorAll("#lista-personagens .personagem-card")
+      .forEach((outroCard) => {
+        outroCard.classList.remove("selecionado");
+      });
+
+    card.classList.add("selecionado");
+
   });
 });
     
