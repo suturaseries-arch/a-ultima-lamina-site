@@ -18,7 +18,33 @@
       color: white;
       font-family: Arial, sans-serif;
     }
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+
+  padding: 15px 20px;
+
+  background: rgba(8, 8, 8, 0.95);
+  border-bottom: 1px solid #333;
+}
+
+.menu a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.menu a:hover {
+  color: #f2c400;
+}
     .hero {
       min-height: 100vh;
       background:
