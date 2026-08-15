@@ -361,21 +361,6 @@
 
   <div id="lista-imperios">
 
-    <div class="personagem-card">
-  <img src="assets/Uhurosimbofc.png" alt="Brasão do Reino Ühoro">
-  <h3>Ühoro</h3>
-    </div>
-
-    <div class="personagem-card">
-  <img src="assets/Kuroganesimbofc.png" alt="Brasão do Império Kurogane">
-  <h3>Kurogane</h3>
-</div>
-
-    <div class="personagem-card">
-  <img src="assets/Variosimbofc.png" alt="Brasão do Reino Varyō">
-  <h3>Varyō</h3>
-    </div>
-
      </div>
 
 <div class="personagens-divisor"></div> 
@@ -463,6 +448,28 @@ clas.forEach((cla) => {
       >
 
       <h3>${cla.Nome}</h3>
+    </div>
+  `;
+});
+
+    const { data: reinos, error: erroReinos } = await supabase
+  .from("Reinos")
+  .select("*");
+
+console.log(reinos);
+console.log(erroReinos);
+
+const listaImperios = document.getElementById("lista-imperios");
+
+reinos.forEach((reino) => {
+  listaImperios.innerHTML += `
+    <div class="personagem-card">
+      <img
+        src="${reino.Imagem}"
+        alt="Brasão de ${reino.Nome}"
+      >
+
+      <h3>${reino.Nome}</h3>
     </div>
   `;
 });
