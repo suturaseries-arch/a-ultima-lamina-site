@@ -451,11 +451,6 @@ console.log("Supabase conectado!");
   .from("Clas")
   .select("*");
 
-if (erroClas) {
-  alert("ERRO: " + erroClas.message);
-} else {
-  alert("Clãs encontrados: " + clas.length);
-}
 
     const listaClas = document.getElementById("lista-clas");
 
