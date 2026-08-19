@@ -558,6 +558,7 @@ producao.forEach((item) => {
 
 console.log(configuracao);
 console.log(erroConfiguracao);
+    alert(configuracao?.capa_atual || "NÃO VEIO NADA");
 
 if (configuracao?.capa_atual) {
   document.querySelector(".hero").style.backgroundImage = `
