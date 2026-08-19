@@ -52,7 +52,7 @@
           rgba(0,0,0,0.25),
           rgba(0,0,0,0.75)
         ),
-        url("assets/Capa-promocional.png")
+        
         center / cover no-repeat;
 
       display: flex;
@@ -550,6 +550,24 @@ producao.forEach((item) => {
     </div>
   `;
 });
+
+    const { data: configuracao, error: erroConfiguracao } = await supabase
+  .from("Configuracoes")
+  .select("capa_atual")
+  .single();
+
+console.log(configuracao);
+console.log(erroConfiguracao);
+
+if (configuracao?.capa_atual) {
+  document.querySelector(".hero").style.backgroundImage = `
+    linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.75)
+    ),
+    url("${configuracao.capa_atual}")
+  `;
+}
     
   </script>
   
