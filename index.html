@@ -553,26 +553,21 @@ producao.forEach((item) => {
 
     const { data: configuracao, error: erroConfiguracao } = await supabase
   .from("Capa Do Site")
-  .select("capa_atual")
-  .single();
-
+  .select("*")
+  .limit(1);
+    
 console.log(configuracao);
 console.log(erroConfiguracao);
   
-if (true) {
-  const caminhoCapa = new URL(
-    configuracao.capa_atual,
-    window.location.origin
-  ).href;
-
+if (configuracao && configuracao.length > 0) {
   document.querySelector(".hero").style.background = `
     linear-gradient(
       rgba(0,0,0,0.25),
       rgba(0,0,0,0.75)
     ),
-    url("${caminhoCapa}") center / cover no-repeat
+    url("${configuracao[0].capa_atual}") center / cover no-repeat
   `;
-}
+    }
     
   </script>
   
