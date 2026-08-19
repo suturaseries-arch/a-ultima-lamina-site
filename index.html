@@ -296,6 +296,8 @@
     e futuras etapas da produção.
   </p>
 
+    <div id="lista-producao"></div>
+
   <div style="margin-top: 30px;">
 
     <h3 style="color: #f2c400; margin-bottom: 10px;">
@@ -535,6 +537,52 @@ artes.forEach((arte) => {
         alt="${arte.Nome}"
         style="width: 100%; max-width: 600px; border-radius: 8px; display: block; margin: 30px auto;"
       >
+    </div>
+  `;
+});
+
+    const { data: producao, error: erroProducao } = await supabase
+  .from("Producao")
+  .select("*");
+
+console.log(producao);
+console.log(erroProducao);
+
+const listaProducao = document.getElementById("lista-producao");
+
+producao.forEach((item) => {
+  listaProducao.innerHTML += `
+    <div style="margin-top: 30px;">
+
+      <h3 style="color: #f2c400; margin-bottom: 10px;">
+        ${item.Nome}
+      </h3>
+
+      <p>
+        Status: ${item.Status}
+      </p>
+
+      <div style="
+        width: 100%;
+        max-width: 700px;
+        height: 12px;
+        background: #222;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 12px;
+      ">
+        <div style="
+          width: ${item.Progresso}%;
+          height: 100%;
+          background: #f2c400;
+          border-radius: 10px;
+        "></div>
+      </div>
+
+      <p style="margin-top: 8px;">
+        ${item.Progresso}%
+      </p>
+
     </div>
   `;
 });
