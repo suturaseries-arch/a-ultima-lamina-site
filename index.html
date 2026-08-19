@@ -559,15 +559,13 @@ producao.forEach((item) => {
 console.log(configuracao);
 console.log(erroConfiguracao);
   
-if (configuracao?.capa_atual) {
-  document.querySelector(".hero").style.background = `
-    linear-gradient(
-      rgba(0,0,0,0.25),
-      rgba(0,0,0,0.75)
-    ),
-    url("${configuracao.capa_atual}") center / cover no-repeat
-  `;
-}
+document.querySelector(".hero").style.background = `
+  linear-gradient(
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.75)
+  ),
+  url("assets/Capa-promocional.png") center / cover no-repeat
+`;
     
   </script>
   
