@@ -517,6 +517,27 @@ data.forEach((personagem) => {
 
   });
 });
+
+  const { data: artes, error: erroArtes } = await supabase
+  .from("Artes")
+  .select("*");
+
+console.log(artes);
+console.log(erroArtes);
+
+const listaArtes = document.getElementById("lista-artes");
+
+artes.forEach((arte) => {
+  listaArtes.innerHTML += `
+    <div>
+      <img
+        src="${arte.Imagem}"
+        alt="${arte.Nome}"
+        style="width: 100%; max-width: 600px; border-radius: 8px; display: block; margin: 30px auto;"
+      >
+    </div>
+  `;
+});
     
   </script>
   
