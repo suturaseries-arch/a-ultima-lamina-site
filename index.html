@@ -552,7 +552,7 @@ producao.forEach((item) => {
 });
 
     const { data: configuracao, error: erroConfiguracao } = await supabase
-  .from("Configuracoes")
+  .from("Capa Do Site")
   .select("capa_atual")
   .single();
 
