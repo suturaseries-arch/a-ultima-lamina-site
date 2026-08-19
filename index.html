@@ -558,7 +558,10 @@ producao.forEach((item) => {
 
 console.log(configuracao);
 console.log(erroConfiguracao);
-    alert(configuracao?.capa_atual || "NÃO VEIO NADA");
+  alert(
+  "DADOS: " + JSON.stringify(configuracao) +
+  "\nERRO: " + JSON.stringify(erroConfiguracao)
+);
 
 if (configuracao?.capa_atual) {
   document.querySelector(".hero").style.backgroundImage = `
