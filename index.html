@@ -538,7 +538,15 @@ producao.forEach((item) => {
         <div style="
           width: ${item.Progresso}%;
           height: 100%;
-          background: #f2c400;
+          background: linear-gradient(
+  90deg,
+  red,
+  green,
+  blue,
+  red
+);
+background-size: 300% 100%;
+animation: rgbBarra 3s linear infinite;
           border-radius: 10px;
         "></div>
       </div>
