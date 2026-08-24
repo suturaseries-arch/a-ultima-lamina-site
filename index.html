@@ -596,15 +596,7 @@ producao.forEach((item) => {
     </div>
   `;
 });
-
-      <p style="margin-top: 8px;">
-        ${item.Progresso}%
-      </p>
-
-    </div>
-  `;
-});
-
+    
     const { data: configuracao, error: erroConfiguracao } = await supabase
   .from("Capa Do Site")
   .select("*")
