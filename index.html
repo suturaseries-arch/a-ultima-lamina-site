@@ -537,29 +537,65 @@ producao.forEach((item) => {
       </p>
 
       <div style="
-        width: 100%;
-        max-width: 700px;
-        height: 12px;
-        background: #222;
-        border-radius: 10px;
-        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 15px;
         margin-top: 12px;
+        width: 100%;
       ">
+
         <div style="
-          width: ${item.Progresso}%;
-          height: 100%;
-          background: linear-gradient(
-  90deg,
-  red,
-  green,
-  blue,
-  red
-);
-background-size: 300% 100%;
-animation: rgbBarra 3s linear infinite;
+          flex: 1;
+          height: 12px;
+          background: #222;
           border-radius: 10px;
-        "></div>
+          overflow: hidden;
+        ">
+          <div style="
+            width: ${item.Progresso}%;
+            height: 100%;
+            background: linear-gradient(
+              90deg,
+              red,
+              green,
+              blue,
+              red
+            );
+            background-size: 300% 100%;
+            animation: rgbBarra 3s linear infinite;
+            border-radius: 10px;
+          "></div>
+        </div>
+
+        ${item.LinkEpisodios ? `
+          <a
+            href="${item.LinkEpisodios}"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="
+              padding: 8px 14px;
+              background: #f2c400;
+              color: #080808;
+              text-decoration: none;
+              font-weight: bold;
+              border-radius: 5px;
+              white-space: nowrap;
+              font-size: 0.8rem;
+            "
+          >
+            LER EPISÓDIO
+          </a>
+        ` : ""}
+
       </div>
+
+      <p style="margin-top: 8px;">
+        ${item.Progresso}%
+      </p>
+
+    </div>
+  `;
+});
 
       <p style="margin-top: 8px;">
         ${item.Progresso}%
