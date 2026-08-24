@@ -524,7 +524,7 @@ console.log(erroProducao);
 
 const listaProducao = document.getElementById("lista-producao");
 
-producao.forEach((item) => {
+    producao.forEach((item) => {
   listaProducao.innerHTML += `
     <div style="margin-top: 30px;">
 
@@ -541,7 +541,6 @@ producao.forEach((item) => {
         align-items: center;
         gap: 15px;
         margin-top: 12px;
-        width: 100%;
       ">
 
         <div style="
@@ -567,9 +566,9 @@ producao.forEach((item) => {
           "></div>
         </div>
 
-        ${item.LinkEpisodios ? `
+        ${item.LinkLivro ? `
           <a
-            href="${item.LinkEpisodios}"
+            href="${item.LinkLivro}"
             target="_blank"
             rel="noopener noreferrer"
             style="
@@ -583,7 +582,7 @@ producao.forEach((item) => {
               font-size: 0.8rem;
             "
           >
-            LER EPISÓDIO
+            VER LIVRO
           </a>
         ` : ""}
 
