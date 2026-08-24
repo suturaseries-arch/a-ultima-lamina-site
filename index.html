@@ -638,6 +638,22 @@ if (configuracao && configuracao.length > 0) {
       });
   }
   </script>
+
+<script>
+  document
+    .getElementById("ativar-notificacoes")
+    .addEventListener("click", async () => {
+
+      const permissao = await Notification.requestPermission();
+
+      if (permissao === "granted") {
+        alert("🔔 Notificações ativadas!");
+      } else {
+        alert("As notificações não foram ativadas.");
+      }
+
+    });
+</script>
   
 </body>
 </html>
