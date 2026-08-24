@@ -524,7 +524,7 @@ console.log(erroProducao);
 
 const listaProducao = document.getElementById("lista-producao");
 
-    producao.forEach((item) => {
+  producao.forEach((item) => {
   listaProducao.innerHTML += `
     <div style="margin-top: 30px;">
 
@@ -566,25 +566,24 @@ const listaProducao = document.getElementById("lista-producao");
           "></div>
         </div>
 
-        ${item.LinkLivro ? `
-          <a
-            href="${item.LinkLivro}"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="
-              padding: 8px 14px;
-              background: #f2c400;
-              color: #080808;
-              text-decoration: none;
-              font-weight: bold;
-              border-radius: 5px;
-              white-space: nowrap;
-              font-size: 0.8rem;
-            "
-          >
-            VER LIVRO
-          </a>
-        ` : ""}
+        <a
+          href="${item.LinkLivro}"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="
+            display: inline-block;
+            padding: 10px 16px;
+            background: #f2c400;
+            color: #080808;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.8rem;
+          "
+        >
+          VER LIVRO
+        </a>
 
       </div>
 
